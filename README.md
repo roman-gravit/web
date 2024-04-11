@@ -249,3 +249,58 @@ All the headers are case-insensitive, headers fields are separated by colon, key
  - Security 
 
  and others...
+
+
+## HTTP response status codes
+
+HTTP response status codes indicate whether a specific HTTP request has been successfully completed. 
+
+Responses are grouped in five classes(for ex: most usable):
+
+ - **Informational** responses (100 – 199)
+
+ - **Successful** responses (200 – 299) : 200-OK 
+
+ - **Redirection** messages (300 – 399) : 304-Not Modified
+ 
+ - **Client error** responses (400 – 499) : 400-Bad Request, 401-Unauthorized, 403-Forbidden, 404-Not Found
+
+ - **Server error** responses (500 – 599) : 500-Internal Server Error, 501-Not Implemented, 503-Service Unavailable
+
+
+## What is API
+
+API (Application programming interface) — its contract to know to how to communicate with the app(programm)
+ 
+API — its a set of methods, constants, properties....
+
+
+## REST API
+
+REpresentational State Transfer. 
+
+Its approach(or architectical style) to create web application API and how simply and standtartized communicate between client and server, via request and response. 
+Or set ot rules how effectively communicate via http protocol between client and server.
+Think about which resources server wants to open for clients.
+
+
+ Main concepts:
+  
+ - Communication between server and clients. and it should be simple, standtartized API, for ex:
+
+   ```
+	Add new product:   POST       =>  ./server/products
+	Delete product:    DELETE     =>  ./server/products
+	Update product:    PUT/PATCH  =>  ./server/products
+	GET all products:  GET        =>  ./server/products
+	Get exact product: GET        =>  ./server/products/{id}
+
+   ```
+
+ - System can be multilevel on server side (with load balancing or several nodes etc...) and be Scalable
+
+ - Server should work with high performance 
+ 
+ - Stateless(think that each request from client is its first request), means that **client should send all needed information**
+
+ - Caching
