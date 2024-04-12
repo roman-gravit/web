@@ -335,6 +335,22 @@ envelope : root element
 SOAP is a protocol with the structure.
 
 
+ ## RPC(Remote procedure call)
+
+Client - Client Stub -> Network - Server Stub - Server
+
+ - gRPC: Framework(platform) form Google, invented at 2015. Very popular in Microservice architecture.
+	    
+	Pro: Http 2.0(binary format)
+	     Data streaming
+		 Using of binaty format(protobuf) instead of json
+		 protoc files from which we can generate files for different program languages
+
+
+ - TRPC (Typesafe RPC)
+
+
+
 ## What is CDN 
 
 CDN(content delivery network) - distributed network of proxy servers and their data centers.
