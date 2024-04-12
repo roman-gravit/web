@@ -303,4 +303,68 @@ Think about which resources server wants to open for clients.
  
  - Stateless(think that each request from client is its first request), means that **client should send all needed information**
 
- - Caching
+ - Caching.  GET requests should be cached.
+
+ - In most cases format of the data in communication between server-client (json or xml)
+
+ - API should be versioned =>   ./server/v2/newproducts
+
+ - API specification: **Open API** (status codes, endpoints, server errors, input query parameters...)
+					  **Swagger** instrument to help create and maintain Open API.
+
+So, its the set of recomendations.
+
+  https://systems.education/what-is-rest    https://skillbox.ru/media/code/rest-api-chto-eto-takoe-i-kak-rabotaet/ 2022
+
+
+
+## SOAP
+
+Its a protocol for communication of the structured messages with the XML or SOAP XML.
+
+SOAP can use several protocols to communicate: SMTP, FTP, HTTP.
+
+For describing SOAP services wsdl(web service description language) is used (xml-based)
+
+SOAP message is determined:  
+envelope : root element
+  header : similar to http headers, additional information
+  body   : data  
+ [error} : 
+
+SOAP is a protocol with the structure.
+
+
+## What is CDN 
+
+CDN(content delivery network) - distributed network of proxy servers and their data centers.
+
+Send data to user from the closiest server. The goal is to provide high availability and performance by distributing 
+
+the service spatially relative to end users. CDN nodes are usually deployed in multiple locations, often over multiple Internet backbones. 
+
+Benefits include reducing bandwidth costs, improving page load times, and increasing the global availability of content.
+
+
+## GraphQL 
+
+Is a language of requests. Request from client only needed info.
+
+- in classic approach server determine schema and format of the data which it return to client
+
+- GraphQL: server determne schema, but client requests ONLY needed data
+
+
+GraphQL has two types of requests:
+
+ - query (get)
+
+ - mutation (post)
+
+ - Subscription (real time data change)
+
+
+ ## Web Sockets 
+
+Protocol with the constant connection. So called broadcast of the messages.
+
